@@ -161,7 +161,7 @@ nav.main-nav a.active::after{
 .card{
   background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
   padding:32px;box-shadow:var(--shadow);
-  transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease, opacity .6s ease;
 }
 .card:hover{transform:translateY(-4px);border-color:var(--brass);}
 .card-photo{padding:0;overflow:hidden;}
@@ -251,7 +251,7 @@ table.price-table td.price{font-family:var(--serif);font-weight:700;color:var(--
 .product-card{
   background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
   overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;
-  transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease, opacity .6s ease;
 }
 .product-card:hover{transform:translateY(-4px);border-color:var(--brass);}
 .product-photo{
@@ -370,4 +370,74 @@ footer a:hover{color:var(--brass-light);}
   .form-row{grid-template-columns:1fr;}
   .banner{padding:36px 28px;}
   section{padding:64px 0;}
+}
+
+/* ==========================================================================
+   Motion — hero entrance, scroll-triggered reveal, ticker marquee
+   Injected/observed by js/main.js. Reveal rules are scoped under
+   body.js-ready (added by main.js) so content stays fully visible if JS
+   is blocked or fails, instead of getting stuck hidden.
+   ========================================================================== */
+
+/* Hero entrance — pure CSS, plays on first paint regardless of JS */
+@keyframes fade-up-in{
+  from{opacity:0;transform:translateY(22px);}
+  to{opacity:1;transform:translateY(0);}
+}
+.hero h1,.page-hero h1{animation:fade-up-in .8s ease both;}
+.hero p.lead,.page-hero p{animation:fade-up-in .8s ease .15s both;}
+.hero .btn-row{animation:fade-up-in .8s ease .3s both;}
+.hero-stats{animation:fade-up-in .8s ease .45s both;}
+
+/* Scroll-triggered reveal */
+body.js-ready .card,
+body.js-ready .team-card,
+body.js-ready .product-card,
+body.js-ready .service-block,
+body.js-ready .brand-pillar,
+body.js-ready .contact-info-item,
+body.js-ready .banner,
+body.js-ready .section-head,
+body.js-ready .photo-banner,
+body.js-ready .photo-pair figure,
+body.js-ready .form-card{
+  opacity:0;
+  transform:translateY(28px);
+  transition:opacity .6s ease, transform .6s ease;
+}
+.in-view{opacity:1 !important;transform:none !important;}
+
+/* Ticker marquee — inserted after the hero/page-hero by main.js */
+.ticker{
+  background:var(--wood-dark);overflow:hidden;white-space:nowrap;
+  border-top:1px solid rgba(232,165,61,.25);border-bottom:1px solid rgba(232,165,61,.25);
+  padding:14px 0;
+}
+.ticker-track{display:inline-flex;width:max-content;animation:ticker-scroll 26s linear infinite;}
+.ticker:hover .ticker-track{animation-play-state:paused;}
+.ticker-track span{
+  display:inline-block;font-family:var(--serif);font-weight:600;font-size:.95rem;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--brass-light);
+}
+@keyframes ticker-scroll{
+  from{transform:translateX(0);}
+  to{transform:translateX(-50%);}
+}
+
+@media (prefers-reduced-motion: reduce){
+  .hero h1,.page-hero h1,.hero p.lead,.page-hero p,.hero .btn-row,.hero-stats{animation:none;}
+  .ticker-track{animation:none;}
+  body.js-ready .card,
+  body.js-ready .team-card,
+  body.js-ready .product-card,
+  body.js-ready .service-block,
+  body.js-ready .brand-pillar,
+  body.js-ready .contact-info-item,
+  body.js-ready .banner,
+  body.js-ready .section-head,
+  body.js-ready .photo-banner,
+  body.js-ready .photo-pair figure,
+  body.js-ready .form-card{
+    opacity:1;transform:none;transition:none;
+  }
 }
