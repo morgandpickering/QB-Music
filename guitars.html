@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guitars For Sale | Quattlebaum Music</title>
+<meta name="description" content="Browse guitars currently in stock at Quattlebaum Music in Searcy, AR, and reserve or purchase online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      <img src="https://searcymusic.com/wp-content/uploads/2016/08/Quattlebaum_logo-2.png" alt="Quattlebaum Music logo">
+      <span class="brand-name">Quattlebaum<small>Music &middot; Est. 1966</small></span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="guitars.html" class="active">Guitars</a>
+      <a href="services.html">Services</a>
+      <a href="brands.html">Brands</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-cta">
+      <a class="phone-link" href="tel:15012686694">(501) 268-6694</a>
+      <a class="btn btn-primary" href="contact.html">Visit Us</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="breadcrumb">Guitars</span>
+    <h1>Guitars currently in stock.</h1>
+    <p>A sample of what's on the floor right now. Reserve online with a deposit or buy outright &mdash; or just call and we'll hold it for you.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+
+    <!--
+      DEMO CONTENT — everything below is example data. Before this page
+      goes live: replace the four sample listings with real inventory,
+      swap in real photos, and connect each "Buy Now" button to a real
+      payment link from Stripe / Square / PayPal (see notice below and
+      README-GUITARS.md for exactly how).
+    -->
+    <div class="notice-banner">
+      <strong>Demo page:</strong> the four listings and "Buy Now" buttons below are examples only &mdash; the buttons link to placeholder pages, not real checkouts. See <code>README-GUITARS.md</code> for how to swap in real inventory and connect a real payment processor.
+    </div>
+
+    <div class="product-grid">
+
+      <div class="product-card">
+        <div class="product-photo">
+          <span class="emoji">&#127928;</span>
+          <span class="label">Photo coming soon</span>
+        </div>
+        <div class="product-body">
+          <span class="product-badge">In Stock</span>
+          <h3>Sunburst Dreadnought Acoustic</h3>
+          <p class="product-spec">Spruce top &middot; mahogany back &amp; sides &middot; gig bag included</p>
+          <p class="product-price">$349</p>
+          <div class="buy-row">
+            <a href="#" class="btn btn-buy btn-stripe" target="_blank" rel="noopener">Buy Now &mdash; Stripe</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-photo">
+          <span class="emoji">&#127928;</span>
+          <span class="label">Photo coming soon</span>
+        </div>
+        <div class="product-body">
+          <span class="product-badge">In Stock</span>
+          <h3>Custom Shop Strat-Style Electric</h3>
+          <p class="product-spec">Alder body &middot; maple neck &middot; 3 single-coil pickups</p>
+          <p class="product-price">$899</p>
+          <div class="buy-row">
+            <a href="#" class="btn btn-buy btn-square" target="_blank" rel="noopener">Buy Now &mdash; Square</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-photo">
+          <span class="emoji">&#127928;</span>
+          <span class="label">Photo coming soon</span>
+        </div>
+        <div class="product-body">
+          <span class="product-badge">In Stock</span>
+          <h3>4-String Precision Bass</h3>
+          <p class="product-spec">Poplar body &middot; active pickups &middot; includes strap &amp; cable</p>
+          <p class="product-price">$429</p>
+          <div class="buy-row">
+            <a href="#" class="btn btn-buy btn-paypal" target="_blank" rel="noopener">Buy Now &mdash; PayPal</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-photo">
+          <span class="emoji">&#127928;</span>
+          <span class="label">Photo coming soon</span>
+        </div>
+        <div class="product-body">
+          <span class="product-badge">Only 1 Left</span>
+          <h3>Concert Ukulele</h3>
+          <p class="product-spec">Solid mahogany &middot; gig bag included &middot; great starter instrument</p>
+          <p class="product-price">$89</p>
+          <div class="buy-row">
+            <a href="tel:15012686694" class="btn btn-buy btn-outline-dark">Call to Reserve</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="payment-key">
+      <span><span class="dot" style="background:#635bff;"></span> Stripe Payment Link</span>
+      <span><span class="dot" style="background:#000;"></span> Square Online Checkout</span>
+      <span><span class="dot" style="background:#ffc439;"></span> PayPal Buy Now</span>
+      <span><span class="dot" style="background:var(--wood);"></span> No online payment yet &mdash; call to reserve</span>
+    </div>
+
+  </div>
+</section>
+
+<section style="background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+  <div class="container">
+    <div class="banner">
+      <div>
+        <h2>Don't see what you're looking for?</h2>
+        <p>Quattlebaum has access to just about any instrument you can imagine &mdash; call or stop by and we'll help you track it down.</p>
+      </div>
+      <a href="contact.html" class="btn" style="background:var(--wood-dark);color:#fff;">Ask Us</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="brand"><img src="https://searcymusic.com/wp-content/uploads/2016/08/quattlebaum_white.png" alt="Quattlebaum Music" style="height:38px;"></a>
+        <p>Family-owned and operated in Searcy, Arkansas since 1966. Instruments, lessons, sound systems, and repairs.</p>
+        <div class="social-row">
+          <a href="https://www.facebook.com/Quattlebaum-Music-Center-113843748669623/?fref=ts" aria-label="Facebook" target="_blank" rel="noopener">f</a>
+        </div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="guitars.html">Guitars</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="brands.html">Brands</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <ul>
+          <li>101 W Arch Ave<br>Searcy, AR 72143</li>
+          <li><a href="tel:15012686694">(501) 268-6694</a></li>
+          <li><a href="mailto:qmusic1966@gmail.com">qmusic1966@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 1966&ndash;2026 Quattlebaum Music. All rights reserved.</span>
+      <span>Searcy, Arkansas</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
