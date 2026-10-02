@@ -1,0 +1,33 @@
+{
+  "name": "quattlebaum-music",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "check:commerce": "node scripts/check-commerce.mjs",
+    "check:a11y": "node scripts/check-a11y.mjs",
+    "check:links": "node scripts/check-links.mjs",
+    "check:offers": "node scripts/check-offers.mjs"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "next": "15.5.25",
+    "radix-ui": "^1.6.7",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "server-only": "^0.0.1",
+    "tailwind-merge": "^3.7.0",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.1.13",
+    "@types/node": "22.15.3",
+    "@types/react": "19.1.9",
+    "@types/react-dom": "19.1.7",
+    "tailwindcss": "4.1.13",
+    "typescript": "5.8.3"
+  }
+}

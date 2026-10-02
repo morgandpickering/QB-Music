@@ -1,0 +1,542 @@
+@import "tailwindcss";
+
+/* ============================================================
+   QUATTLEBAUM MUSIC — DESIGN TOKENS
+   "A modern music store with an old-school soul."
+
+   Surfaces alternate dark (walls, cases, amps) and light (paper,
+   sheet music) the way a real shop alternates shadow and window.
+   Every text pair below is verified at or above WCAG AA.
+   ============================================================ */
+@theme {
+  /* -- Color ------------------------------------------------- */
+  --color-ink: #14100e;         /* warm near-black: worn case lining */
+  --color-walnut: #2b211b;      /* dark wood, tolex */
+  --color-oak: #6b4f34;         /* natural wood mid-tone */
+  --color-paper: #f4efe6;       /* warm white */
+  --color-parchment: #e5d9c6;   /* deeper cream, sheet music */
+  --color-brass: #a9803c;       /* muted brass hardware: large text / decor only on light */
+  --color-brass-deep: #7a5622;  /* brass for small text on light  - 5.76:1 */
+  --color-brass-light: #c3a05a; /* brass for small text on dark   - 6.36:1 */
+  --color-amber: #e0a93f;       /* amp glow, used sparingly       - 8.93:1 on ink */
+  --color-burgundy: #6b2130;
+  --color-teal: #2c5a57;
+  --color-quiet-dark: #b9aea0;  /* secondary text on ink   - 8.67:1 */
+  --color-quiet-light: #5e554b; /* secondary text on paper - 6.37:1 */
+  --color-rule-dark: #3a2e26;   /* hairlines on dark */
+  --color-rule-light: #d6c9b4;  /* hairlines on light */
+  --color-danger: #9b2226;
+
+  /* -- Type -------------------------------------------------- */
+  --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-archivo), ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  /* Fluid scale: a minor third at reading sizes opening toward
+     1.4 at display sizes, so headlines can genuinely dominate. */
+  --text-2xs: 0.6875rem;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: clamp(1.25rem, 0.5vw + 1.1rem, 1.4rem);
+  --text-2xl: clamp(1.5rem, 1vw + 1.25rem, 1.85rem);
+  --text-3xl: clamp(1.85rem, 1.8vw + 1.4rem, 2.5rem);
+  --text-4xl: clamp(2.25rem, 3vw + 1.5rem, 3.5rem);
+  --text-5xl: clamp(2.75rem, 5vw + 1.4rem, 5rem);
+  --text-6xl: clamp(3.25rem, 8vw + 1rem, 7.5rem);
+
+  /* -- Rhythm ------------------------------------------------ */
+  --radius-xs: 2px;
+  --radius-sm: 3px;
+  --radius-md: 4px;
+
+  /* -- Motion ------------------------------------------------ */
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out-soft: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 180ms;
+  --dur-base: 320ms;
+  --dur-slow: 620ms;
+  --dur-reveal: 900ms;
+}
+
+/* ============================================================
+   BASE
+   ============================================================ */
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    /*
+      The masthead is sticky, so anything scrolled to — an in-page anchor, or
+      the element the browser scrolls to when focus moves there with the
+      keyboard — would otherwise land underneath it. This is the header's own
+      height, and it is why focus stays visible while tabbing down a page.
+    */
+    scroll-padding-top: 8rem;
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    line-height: 1.04;
+    letter-spacing: -0.018em;
+    font-variation-settings: "SOFT" 22, "WONK" 1;
+    text-wrap: balance;
+  }
+
+  h5,
+  h6 {
+    font-family: var(--font-sans);
+    font-weight: 600;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Visible, branded focus. Never removed. */
+  :focus-visible {
+    outline: 2px solid var(--color-amber);
+    outline-offset: 3px;
+    border-radius: var(--radius-xs);
+  }
+
+  .on-light :focus-visible {
+    outline-color: var(--color-burgundy);
+  }
+
+  ::selection {
+    background: var(--color-amber);
+    color: var(--color-ink);
+  }
+
+  input,
+  textarea,
+  select,
+  button {
+    font: inherit;
+    color: inherit;
+  }
+
+  [hidden] {
+    display: none !important;
+  }
+}
+
+/* ============================================================
+   UTILITIES
+   ============================================================ */
+@layer utilities {
+  /* One page container, used everywhere. */
+  .shell {
+    width: 100%;
+    margin-inline: auto;
+    max-width: 88rem;
+    padding-inline: clamp(1.25rem, 5vw, 5rem);
+  }
+
+  .shell-tight {
+    max-width: 64rem;
+  }
+
+  /* Readable measure, under 80ch per Bringhurst. */
+  .measure {
+    max-width: 62ch;
+  }
+
+  .measure-narrow {
+    max-width: 46ch;
+  }
+
+  /* Photographic grain, applied to image wrappers rather than whole
+     pages so it never taxes scroll compositing. */
+  .grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.17;
+    mix-blend-mode: overlay;
+    background-image: url("/texture/grain.svg");
+    background-size: 200px 200px;
+  }
+
+  /* A small structural label. Deliberately not tracked-out all-caps
+     chrome: it is set in the display italic, and only used where the
+     label carries real information (category, condition, stage). */
+  .marker {
+    font-family: var(--font-display);
+    font-size: var(--text-sm);
+    font-variation-settings: "SOFT" 60, "WONK" 1;
+    font-style: italic;
+    letter-spacing: 0.005em;
+  }
+
+  /* Link underline that draws in from the leading edge. */
+  .link-draw {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    padding-bottom: 1px;
+    transition: background-size var(--dur-base) var(--ease-out-soft);
+  }
+
+  .link-draw:hover,
+  .link-draw:focus-visible {
+    background-size: 100% 1px;
+  }
+
+  /* Keeps a decorative canvas from ever intercepting a click. */
+  .inert-layer {
+    pointer-events: none;
+    user-select: none;
+  }
+}
+
+/* ============================================================
+   ON-LOAD REVEAL (above the fold)
+
+   Hero type must never wait for JavaScript. These rules are pure
+   CSS animation, unscoped to .js and driven by nothing but the
+   page loading, so the first headline a visitor reads is painted
+   even if the bundle is slow, blocked, or never arrives. The
+   IntersectionObserver system below is only for content further
+   down the page, which by definition has time to hydrate.
+   ============================================================ */
+@keyframes qm-rise-line {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 1.1em, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes qm-rise-block {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 1.75rem, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+[data-reveal-load="lines"] > * {
+  display: block;
+}
+
+[data-reveal-load="lines"] > * > * {
+  display: block;
+  animation: qm-rise-line var(--dur-reveal) var(--ease-out-soft) both;
+}
+
+[data-reveal-load="rise"] > *,
+[data-reveal-load="fade"] > * {
+  animation: qm-rise-block var(--dur-reveal) var(--ease-out-soft) both;
+}
+
+[data-reveal-load="fade"] > * {
+  animation-name: qm-rise-line;
+}
+
+/* ============================================================
+   SCROLL REVEAL
+   One orchestrated device used site-wide: masked lines rise into
+   place. Driven by a single IntersectionObserver (useReveal) that
+   sets [data-revealed]. No animation library.
+
+   EVERY RULE BELOW IS SCOPED TO .js, which an inline script in the
+   document head adds before first paint. Without JavaScript nothing
+   is ever hidden, so the page reads completely whether or not the
+   reveal script runs. This is the difference between an entrance
+   animation and a blank page.
+   ============================================================ */
+.js [data-reveal] > * {
+  opacity: 0;
+  transform: translate3d(0, var(--reveal-y, 1.15em), 0);
+  transition:
+    opacity var(--dur-reveal) var(--ease-out-soft) var(--reveal-delay, 0ms),
+    transform var(--dur-reveal) var(--ease-out-soft) var(--reveal-delay, 0ms);
+}
+
+.js [data-reveal][data-revealed="true"] > * {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Masked line reveal: the outer span clips and stays put, the inner span
+   rises into it, so the type looks pushed up from behind the page. */
+.js [data-reveal="lines"] > * {
+  display: block;
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+.js [data-reveal="lines"] > * > * {
+  display: block;
+  opacity: 0;
+  transform: translate3d(0, 1.1em, 0);
+  transition:
+    opacity var(--dur-reveal) var(--ease-out-soft),
+    transform var(--dur-reveal) var(--ease-out-soft);
+}
+
+.js [data-reveal="lines"][data-revealed="true"] > * > * {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+[data-reveal="rise"] {
+  --reveal-y: 1.75rem;
+}
+
+[data-reveal="fade"] {
+  --reveal-y: 0;
+}
+
+/* Staggered children: category tiles, product grids. */
+.js [data-stagger] > * {
+  opacity: 0;
+  transform: translate3d(0, 1.5rem, 0);
+  transition:
+    opacity var(--dur-slow) var(--ease-out-soft),
+    transform var(--dur-slow) var(--ease-out-soft);
+  transition-delay: calc(var(--i, 0) * 70ms);
+}
+
+.js [data-stagger][data-revealed="true"] > * {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* ============================================================
+   REDUCED MOTION — everything arrives, nothing travels.
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  [data-reveal] > *,
+  [data-reveal="lines"] > * > *,
+  [data-reveal-load] > *,
+  [data-reveal-load="lines"] > * > *,
+  [data-stagger] > * {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  /*
+    The brand strip stops rather than disappearing. Killing the animation
+    alone would leave the names parked inside an overflow:hidden box with no
+    way to see the rest, so the strip becomes a plain horizontal scroller.
+  */
+  [data-marquee] {
+    overflow-x: auto;
+  }
+
+  [data-marquee] .animate-marquee,
+  [data-marquee] .animate-marquee-vertical {
+    animation: none !important;
+  }
+}
+
+/* ============================================================
+   STORE
+   ============================================================ */
+@layer utilities {
+  /*
+     Card controls: revealed on hover where there is a pointer, always
+     present where there is not. "Reveal on hover" on a phone means
+     "never", so touch devices get them outright rather than getting a
+     worse card. Focus reveals them too, so a keyboard can reach them.
+  */
+  .card-actions {
+    transition:
+      transform var(--dur-base) var(--ease-out-soft),
+      opacity var(--dur-base) var(--ease-out-soft);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .card-actions {
+      transform: translateY(101%);
+      opacity: 0;
+    }
+
+    .group:hover .card-actions,
+    .card-actions:focus-within {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  /*
+     A horizontal rail: the New Arrivals and Used shelves. Native scroll with
+     snap points — it works with a trackpad, a thumb, arrow keys and a
+     scrollbar, which is four things a JavaScript carousel has to reimplement
+     badly. The buttons beside it just call scrollBy().
+  */
+  .rail {
+    display: grid;
+    grid-auto-flow: column;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+  }
+
+  .rail::-webkit-scrollbar {
+    display: none;
+  }
+
+  .rail > * {
+    scroll-snap-align: start;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .rail {
+      scroll-behavior: auto;
+    }
+  }
+
+  /* Squares off the number columns in specs and price tables. */
+  .nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@theme inline {
+  --animate-marquee: marquee var(--duration) infinite linear;
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+  @keyframes marquee {
+  from {
+    transform: translateX(0);
+    }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  @keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+    }
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+    }
+  }
+}
+/* ============================================================
+   RADIX ENTER / EXIT
+
+   Radix sets data-state="open|closed" and the shadcn registry
+   components reference `animate-in` / `slide-in-from-*` utilities that
+   ship with the tailwindcss-animate plugin. Only six of them are
+   actually used here, so they are defined directly rather than adding a
+   plugin for six rules. Reduced motion is handled by the global rule
+   further up, which zeroes every animation duration.
+   ============================================================ */
+@layer utilities {
+  @keyframes qm-enter {
+    from {
+      opacity: var(--qm-enter-opacity, 1);
+      transform: translate3d(var(--qm-enter-x, 0), var(--qm-enter-y, 0), 0)
+        scale(var(--qm-enter-scale, 1));
+    }
+  }
+
+  @keyframes qm-exit {
+    to {
+      opacity: var(--qm-exit-opacity, 1);
+      transform: translate3d(var(--qm-exit-x, 0), var(--qm-exit-y, 0), 0)
+        scale(var(--qm-exit-scale, 1));
+    }
+  }
+
+  .animate-in {
+    animation-name: qm-enter;
+    animation-duration: var(--dur-base);
+    animation-timing-function: var(--ease-out-soft);
+    animation-fill-mode: both;
+  }
+
+  .animate-out {
+    animation-name: qm-exit;
+    animation-duration: var(--dur-fast);
+    animation-timing-function: var(--ease-in-out-soft);
+    animation-fill-mode: both;
+  }
+
+  .fade-in-0 {
+    --qm-enter-opacity: 0;
+  }
+
+  .fade-out-0 {
+    --qm-exit-opacity: 0;
+  }
+
+  .zoom-in-\[0\.98\] {
+    --qm-enter-scale: 0.98;
+  }
+
+  .slide-in-from-right {
+    --qm-enter-x: 100%;
+  }
+
+  .slide-out-to-right {
+    --qm-exit-x: 100%;
+  }
+
+  .slide-in-from-left {
+    --qm-enter-x: -100%;
+  }
+
+  .slide-out-to-left {
+    --qm-exit-x: -100%;
+  }
+
+  .slide-in-from-bottom {
+    --qm-enter-y: 100%;
+  }
+
+  .slide-out-to-bottom {
+    --qm-exit-y: 100%;
+  }
+
+  .slide-in-from-top {
+    --qm-enter-y: -100%;
+  }
+
+  .slide-out-to-top {
+    --qm-exit-y: -100%;
+  }
+}

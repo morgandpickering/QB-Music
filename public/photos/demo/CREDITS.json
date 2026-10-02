@@ -1,0 +1,335 @@
+{
+  "generatedBy": "scripts/fetch-demo-photos.mjs",
+  "credits": [
+    {
+      "file": "/photos/demo/electric-guitar-1.jpg",
+      "slug": "electric-guitar-1",
+      "title": "Teisco & Framus.jpg",
+      "author": "DeLerkim",
+      "licence": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Teisco_%26_Framus.jpg",
+      "width": 1400,
+      "height": 2100
+    },
+    {
+      "file": "/photos/demo/electric-guitar-2.jpg",
+      "slug": "electric-guitar-2",
+      "title": "Pyei Sandy.jpg",
+      "author": "Shwemyotaw",
+      "licence": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Pyei_Sandy.jpg",
+      "width": 1400,
+      "height": 2100
+    },
+    {
+      "file": "/photos/demo/electric-guitar-3.jpg",
+      "slug": "electric-guitar-3",
+      "title": "Daniel Catullos office by Don Ramey Logan.jpg",
+      "author": "Don Ramey Logan",
+      "licence": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Daniel_Catullos_office_by_Don_Ramey_Logan.jpg",
+      "width": 1400,
+      "height": 1551
+    },
+    {
+      "file": "/photos/demo/semi-hollow-guitar.jpg",
+      "slug": "semi-hollow-guitar",
+      "title": "Left handed epiphone dot.jpg",
+      "author": "Gary J. Wood from Toronto, ON, Canada",
+      "licence": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Left_handed_epiphone_dot.jpg",
+      "width": 1400,
+      "height": 1867
+    },
+    {
+      "file": "/photos/demo/acoustic-guitar-1.jpg",
+      "slug": "acoustic-guitar-1",
+      "title": "Matao MW-401 Dreadnought acoustic 01.jpg",
+      "author": "Kirkwood123",
+      "licence": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Matao_MW-401_Dreadnought_acoustic_01.jpg",
+      "width": 1400,
+      "height": 1867
+    },
+    {
+      "file": "/photos/demo/classical-guitar.jpg",
+      "slug": "classical-guitar",
+      "title": "Classical Guitar two views.jpg",
+      "author": "Martin Möller",
+      "licence": "CC BY-SA 2.0 de",
+      "source": "https://commons.wikimedia.org/wiki/File:Classical_Guitar_two_views.jpg",
+      "width": 1400,
+      "height": 2131
+    },
+    {
+      "file": "/photos/demo/acoustic-guitar-2.jpg",
+      "slug": "acoustic-guitar-2",
+      "title": "Harri Stojka 30.08.2008c.jpg",
+      "author": "Manfred Werner - Tsui",
+      "licence": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Harri_Stojka_30.08.2008c.jpg",
+      "width": 1400,
+      "height": 2100
+    },
+    {
+      "file": "/photos/demo/ukulele.jpg",
+      "slug": "ukulele",
+      "title": "1955 Teasers \"Hula Uke\" plastic soprano ukulele.jpg",
+      "author": "Lardyfatboy",
+      "licence": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:1955_Teasers_%22Hula_Uke%22_plastic_soprano_ukulele.jpg",
+      "width": 1400,
+      "height": 4148
+    },
+    {
+      "file": "/photos/demo/amplifier-2.jpg",
+      "slug": "amplifier-2",
+      "title": "GuitarDuo@YoyogiPark, 2006-10-29.jpg",
+      "author": "Peter Van den Bossche from Mechelen, Belgium",
+      "licence": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:GuitarDuo@YoyogiPark,_2006-10-29.jpg",
+      "width": 1400,
+      "height": 1050
+    },
+    {
+      "file": "/photos/demo/pedal-1.jpg",
+      "slug": "pedal-1",
+      "title": "Ts9-stompbox.jpg",
+      "author": "Jan Frode Haugseth (Jafro)",
+      "licence": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Ts9-stompbox.jpg",
+      "width": 1400,
+      "height": 1872
+    },
+    {
+      "file": "/photos/demo/pedal-2.jpg",
+      "slug": "pedal-2",
+      "title": "Bass effects - EH, fulltone, MXR, Demeter, AMT.jpg",
+      "author": "RIchie Adiyat",
+      "licence": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Bass_effects_-_EH,_fulltone,_MXR,_Demeter,_AMT.jpg",
+      "width": 1400,
+      "height": 1050
+    },
+    {
+      "file": "/photos/demo/drums-1.jpg",
+      "slug": "drums-1",
+      "title": "A drum kit made by Mapex Drums - Cacon Photos- Copyleft - Creative Commons 02.jpg",
+      "author": "Mostafameraji",
+      "licence": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:A_drum_kit_made_by_Mapex_Drums_-_Cacon_Photos-_Copyleft_-_Creative_Commons_02.jpg",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "file": "/photos/demo/cymbal.jpg",
+      "slug": "cymbal",
+      "title": "Drum set.png",
+      "author": "Pbroks13",
+      "licence": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Drum_set.png",
+      "width": 1400,
+      "height": 1056
+    },
+    {
+      "file": "/photos/demo/trumpet.jpg",
+      "slug": "trumpet",
+      "title": "Dh-musikantenlandmuseum-03.jpg",
+      "author": "Dieter hahn at German Wikipedia (Original text: Dieter hahn 13:19, 1. Jun. 2007 (CEST))",
+      "licence": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Dh-musikantenlandmuseum-03.jpg",
+      "width": 1400,
+      "height": 1050
+    },
+    {
+      "file": "/photos/demo/violin.jpg",
+      "slug": "violin",
+      "title": "William-Adolphe Bouguereau (1825-1905) - Song of the Angels (1881).jpg",
+      "author": "William-Adolphe Bouguereau",
+      "licence": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:William-Adolphe_Bouguereau_(1825-1905)_-_Song_of_the_Angels_(1881).jpg",
+      "width": 1400,
+      "height": 2046
+    },
+    {
+      "file": "/photos/demo/clarinet.jpg",
+      "slug": "clarinet",
+      "title": "Yamaha Clarinet YCL-457II-22.tiff",
+      "author": "Yamaha Corporation",
+      "licence": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Yamaha_Clarinet_YCL-457II-22.tiff",
+      "width": 1400,
+      "height": 9870
+    },
+    {
+      "file": "/photos/demo/cable.jpg",
+      "slug": "cable",
+      "title": "IPEM studio synthesizer (ca.1960-1980) - MIM Brussels (2015-05-30 07.36.09 by chibicode).jpg",
+      "author": "chibicode",
+      "licence": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:IPEM_studio_synthesizer_(ca.1960-1980)_-_MIM_Brussels_(2015-05-30_07.36.09_by_chibicode).jpg",
+      "width": 1400,
+      "height": 787
+    },
+    {
+      "file": "/photos/demo/guitar-case.jpg",
+      "slug": "guitar-case",
+      "title": "Tribal Planet GX15 DA.jpg",
+      "author": "yoppy",
+      "licence": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tribal_Planet_GX15_DA.jpg",
+      "width": 1400,
+      "height": 2100
+    },
+    {
+      "file": "/photos/demo/shop-interior-1.jpg",
+      "slug": "shop-interior-1",
+      "title": "Interior of a Guitar and Ukulele Shop.jpg",
+      "author": "RizaCPH",
+      "licence": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Interior_of_a_Guitar_and_Ukulele_Shop.jpg",
+      "width": 1400,
+      "height": 1048
+    },
+    {
+      "file": "/photos/demo/shop-interior-2.jpg",
+      "slug": "shop-interior-2",
+      "title": "PensacolaCommerceMuseumAug2008MusicStore.jpg",
+      "author": "Infrogmation of New Orleans",
+      "licence": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:PensacolaCommerceMuseumAug2008MusicStore.jpg",
+      "width": 1400,
+      "height": 1050
+    },
+    {
+      "file": "/photos/demo/workbench.jpg",
+      "slug": "workbench",
+      "title": "Roadside Guitars Shop Apr. 28 '09.jpg",
+      "author": "Roadside Guitars",
+      "licence": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Roadside_Guitars_Shop_Apr._28_%2709.jpg",
+      "width": 1400,
+      "height": 1050
+    },
+    {
+      "file": "/photos/demo/live-sound.jpg",
+      "slug": "live-sound",
+      "title": "Tom-at-Desk.jpg",
+      "author": "Tom Harpel from Seattle, Washington, United States",
+      "licence": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tom-at-Desk.jpg",
+      "width": 1400,
+      "height": 893
+    },
+    {
+      "file": "/photos/demo/band.jpg",
+      "slug": "band",
+      "title": "Tivoli (4234979964).jpg",
+      "author": "Leonora (Ellie) Enking from East Preston, United Kingdom",
+      "licence": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tivoli_(4234979964).jpg",
+      "width": 1400,
+      "height": 922
+    },
+    {
+      "file": "/photos/demo/bass-guitar-1.jpg",
+      "slug": "bass-guitar-1",
+      "title": "Aerodyne.jpg",
+      "author": "The original uploader was UPandB at English Wikipedia.",
+      "licence": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Aerodyne.jpg",
+      "width": 1400,
+      "height": 2826
+    },
+    {
+      "file": "/photos/demo/bass-guitar-2.jpg",
+      "slug": "bass-guitar-2",
+      "title": "70's Fender Jazz Bass.png",
+      "author": "70's_Fender_Jazz_Bass.jpg: Patrick Scales derivative work: Djhé (talk)",
+      "licence": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:70%27s_Fender_Jazz_Bass.png",
+      "width": 1400,
+      "height": 4383
+    },
+    {
+      "file": "/photos/demo/amplifier-1.jpg",
+      "slug": "amplifier-1",
+      "title": "Dumble ODS 50W Combo.jpg",
+      "author": "Scottie McInnes",
+      "licence": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Dumble_ODS_50W_Combo.jpg",
+      "width": 1400,
+      "height": 723
+    },
+    {
+      "file": "/photos/demo/keyboard-1.jpg",
+      "slug": "keyboard-1",
+      "title": "Technics digital piano SX-PR902..jpg",
+      "author": "Marlon E",
+      "licence": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Technics_digital_piano_SX-PR902..jpg",
+      "width": 1400,
+      "height": 1050
+    },
+    {
+      "file": "/photos/demo/keyboard-2.jpg",
+      "slug": "keyboard-2",
+      "title": "Elka-rhapsody-610.jpg",
+      "author": "Dominik Müller",
+      "licence": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Elka-rhapsody-610.jpg",
+      "width": 1400,
+      "height": 730
+    },
+    {
+      "file": "/photos/demo/snare-drum.jpg",
+      "slug": "snare-drum",
+      "title": "Backbeat pattern snare drum.png",
+      "author": "The original uploader was Hyacinth at English Wikipedia.",
+      "licence": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Backbeat_pattern_snare_drum.png",
+      "width": 1400,
+      "height": 229
+    },
+    {
+      "file": "/photos/demo/saxophone.jpg",
+      "slug": "saxophone",
+      "title": "CurvedSopranoAltoTenorSaxophoneComparison.jpg",
+      "author": "Ommeh at English Wikipedia",
+      "licence": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:CurvedSopranoAltoTenorSaxophoneComparison.jpg",
+      "width": 1400,
+      "height": 1610
+    },
+    {
+      "file": "/photos/demo/mixing-console.jpg",
+      "slug": "mixing-console",
+      "title": "Yamaha MC2403 audio mixing console (1992).jpg",
+      "author": "Unknown",
+      "licence": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Yamaha_MC2403_audio_mixing_console_(1992).jpg",
+      "width": 1400,
+      "height": 446
+    },
+    {
+      "file": "/photos/demo/microphone-1.jpg",
+      "slug": "microphone-1",
+      "title": "Shure sm58.jpg",
+      "author": "ChrisHH",
+      "licence": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Shure_sm58.jpg",
+      "width": 1400,
+      "height": 1050
+    },
+    {
+      "file": "/photos/demo/microphone-2.jpg",
+      "slug": "microphone-2",
+      "title": "Studio microphone with pop shield.jpg",
+      "author": "Galak76",
+      "licence": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Studio_microphone_with_pop_shield.jpg",
+      "width": 1400,
+      "height": 1901
+    }
+  ]
+}
