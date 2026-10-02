@@ -29,5 +29,9 @@
     "@types/react-dom": "19.1.7",
     "tailwindcss": "4.1.13",
     "typescript": "5.8.3"
+  },
+  "allowScripts": {
+    "@tailwindcss/oxide@4.1.13": true,
+    "sharp@0.34.5": true
   }
 }
